@@ -1,19 +1,33 @@
 import React from 'react';
 
-const Card = ({title}) => {
+const Card = ({ title,imgUrl,view,branch,updateTime }) => {
+
+  const sTitle = title.length > 20 ? title.slice(0,20) +'...' : title 
   return (
-    <div className="  w-80 h-18 rounded overflow-hidden shadow-lg bg-white mt-8">
-      <img className="w-24" src="https://via.placeholder.com/350x150" alt="Placeholder" />
-      <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{title}</div>
-        <p className="text-gray-700 text-base">
-          Lorem ipsum dolor sit amet
-        </p>
-      </div>
-      <div className="px-6 py-4">
-        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Tag 1</span>
-        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Tag 2</span>
-        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">Tag 3</span>
+    <div className="hover:ring hover:border-custom-purple flex flex-col w-80 h-36 rounded-md overflow-hidden shadow-lg bg-white mt-8">
+      <div className=" flex">
+        <img
+          className="w-14 h-12 rounded-xl p-2"
+          src={imgUrl}  
+          alt="Avatar"
+        />
+        <div className="flex font-bold text-xl mb-2 justify-between mt-2">
+          {sTitle}
+        </div>
+        </div>
+        <div>
+        <p className="text-gray-500 text-base pl-14">Lorem ipsum dolor sit amet</p>
+        </div>
+      <div className="py-8 pl-8 flex justify-around">
+        <span className=" inline-block bg-custom-purple rounded-full px-3 py-1 text-sm font-semibold text-white">
+          {view}
+        </span>
+        <span className=" inline-block bg-custom-purple rounded-full px-3 py-1 text-sm font-semibold text-white">
+          {branch}
+        </span>
+        <span className=" inline-block pl-3 py-1 text-sm font-semibold text-gray-500">
+          {updateTime}
+        </span>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Buttons = ({variant, label}) => {
 
-  let buttonClasses = ' font-bold py-2 px-4 rounded bg-purple-500 rounded-3xl'
+  let buttonClasses = ' font-bold py-2 px-4 rounded bg-custom-purple rounded-3xl'
 
   switch (variant){
 
@@ -11,7 +11,7 @@ const Buttons = ({variant, label}) => {
     break;
 
     case 'outlined' :
-    buttonClasses += ' text-purple-500 bg-white border-purple-500 border-2';
+    buttonClasses += ' hover:ring hover:border-blue-500 text-custom-purple bg-white border-custom-purple border-2';
     break;
 
     case 'small' :
