@@ -75,7 +75,7 @@ const repoList = () => {
           <div className="gap-8">
             <SearchBar onSearch={handleSearch} />
           </div>
-          <div className="grid grid-cols-3 h-screen">
+          <div className="grid grid-cols-3">
             {currentRepo.map((repo) => (
               <Link key={repo.id} to={`/repositories/${repo.name}`}>
                 <Card

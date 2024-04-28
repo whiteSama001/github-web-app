@@ -21,7 +21,7 @@ const SearchBar = ({ onSearch }) => {
       />
       <button
         type="submit"
-        className="-ml-36 px-4 bg-custom-purple text-white font-semibold rounded-2xl hover:bg-blue-600 focus:outline-none focus:bg-blue-600 h-8 w-32"
+        className="-ml-36 px-4 bg-custom-purple text-white font-semibold rounded-2xl hover:bg-gray-400 focus:outline-none focus:bg-gray-400 h-8 w-32"
       >
         <span className="m-auto text-center"> Search </span>
       </button>
