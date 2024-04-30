@@ -32,14 +32,14 @@ const repoList = () => {
     fetchData();
   }, []);
 
-  const handleSearch = (query) =>{
+  const handleSearch = (query) => {
     setSearchQuery(query);
-  }
+  };
 
-  const filterRepo = repositories.filter((repo)=>
+  const filterRepo = repositories.filter((repo) =>
     repo.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
-  
+
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   if (loading) {
@@ -62,13 +62,15 @@ const repoList = () => {
           </h2>
         </div>
         <div className=" mr-6 flex flex-row py-4 gap-8 ">
+       
           <Buttons variant="outlined" label="Create a repository" />
-          <Buttons variant="regular" label="My Account" />
+          <a  href="https://github.com/whiteSama001" target="_blank">
+          <Buttons variant="regular" label="View Account" /></a>
           <Avatar />
         </div>
       </div>
       <div className="bg-slate-100 h-full flex justify-between p-8 gap-4">
-        <div className="w-1/6 ">
+        <div className="w-1/6 gap-y-9">
           <Filter />
         </div>
         <div className="flex flex-col w-full">

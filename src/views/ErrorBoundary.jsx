@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class errorBoundary extends Component {
+export class ErrorBoundary extends Component {
 
     constructor(props){
         super(props);
@@ -17,11 +17,15 @@ export class errorBoundary extends Component {
     
   render() {
     if (this.state.hasError) {
-        return <div>Something went wrong.</div>;
+        <div className='h-screen flex justify-center items-center bg-black'>
+    <div className=' text-white font-semibold text-2xl'>Oops!, Something went wrong...</div>
+  </div>
+  ;
       }
   
       return this.props.children;
   }
 }
 
-export default errorBoundary;
+
+export default ErrorBoundary;
